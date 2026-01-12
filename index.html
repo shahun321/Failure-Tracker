@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Failure Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Failure Tracker Form</h1>
+  <form id="failureForm">
+    <label>Rig Number:</label><input type="text" id="rigNumber"><br>
+    <label>Failure ID:</label><input type="text" id="failureID" readonly><br>
+    <label>Date & Time:</label><input type="datetime-local" id="dateTime"><br>
+    <label>Component:</label><input type="text" id="component"><br>
+    <label>Failure Type:</label><input type="text" id="failureType"><br>
+    <label>Severity:</label><input type="text" id="severity"><br>
+    <label>Description:</label><textarea id="description"></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Submitted Records (local view)</h2>
+  <ul id="records"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
