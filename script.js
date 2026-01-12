@@ -28,7 +28,8 @@ document.getElementById("failureForm").addEventListener("submit", async function
     const res = await fetch("https://script.google.com/macros/s/AKfycbzDaNhR9DOlfeqD-bfxx_bBrtD4N953xXTSVMeWWEPAmIho3BNgrdYNykQgazRIlRAckw/exec", {
       method: "POST",
       body: JSON.stringify(failure),
-      headers: { "Content-Type": "application/json" }
+      headers: { "Content-Type": "application/json" },
+      mode: "no-cors"
     });
 
     const data = await res.text();
@@ -46,3 +47,4 @@ document.getElementById("failureForm").addEventListener("submit", async function
     alert("Error submitting data: " + err);
   }
 });
+
